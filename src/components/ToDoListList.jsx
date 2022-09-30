@@ -14,7 +14,7 @@ export function ToDoListList() {
       <div className="todo-list-list">
         {listList}
       </div>
-      <button className="add-list" onClick={addNewList}>Create a To-Do List</button>  
+      <button className="add-list" onClick={addNewList}>Create a To-Do List App</button>  
     </div>
   )
 }

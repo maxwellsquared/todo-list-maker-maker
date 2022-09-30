@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ListItem} from './ListItem';
 
 const devNames = [
   'Alice',
@@ -77,11 +78,21 @@ export function ToDoList() {
   const [devName] = useState(devNames[Math.floor(Math.random() * devNames.length)]);
   const [adjective] = useState(adjectives[Math.floor(Math.random() * adjectives.length)]);
   const [listFont] = useState(fonts[Math.floor(Math.random() * fonts.length)]);
+  const [listItems, setListItems] = useState([]);
+
+  const addNewItem = function(event) {
+    setListItems(listItems.concat(<ListItem key={listItems.length} isChecked="false" />))
+  };
+
   return (
     <>
       <div style={ {backgroundColor: bgColor, color: textColor, fontFamily: listFont}}>
         {devName}'s {adjective} To-Do List App
       </div>
+      <div>
+      {listItems}
+      </div>
+      <button className="app-add-item" onClick={addNewItem}>ADD ITEM</button>
     </>
   )
 }
