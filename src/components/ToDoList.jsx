@@ -86,13 +86,13 @@ export function ToDoList() {
 
   return (
     <>
-      <div style={ {backgroundColor: bgColor, color: textColor, fontFamily: listFont}}>
+      <div style={ {backgroundColor: bgColor, color: textColor, fontFamily: listFont}} className="list-container">
         {devName}'s {adjective} To-Do List App
+        {listItems}
+        <button className="app-add-item" onClick={addNewItem}>ADD ITEM</button>
       </div>
       <div>
-      {listItems}
       </div>
-      <button className="app-add-item" onClick={addNewItem}>ADD ITEM</button>
     </>
   )
 }
