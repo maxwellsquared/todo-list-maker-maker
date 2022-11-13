@@ -11,8 +11,7 @@ export function ListItem() {
   return (
     <>
     <div>
-      
-    <input value={itemText} onChange={updateText}></input>
+      <input value={itemText} onChange={updateText}></input>
     </div>
     </>
   )
