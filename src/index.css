@@ -11,6 +11,8 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 30px;
+  margin-left: 15vw;
+  margin-right: 15vw;
   justify-content: flex-start;
   align-items: center;
 }
